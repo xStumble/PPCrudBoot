@@ -41,12 +41,7 @@ public class UserDaoImp implements UserDao {
 
     @Override
     public User getUser(long id) {
-        User user = em.find(User.class, id);
-        if (user != null) {
-            return user;
-        } else {
-            throw new EntityNotFoundException();
-        }
+        return em.find(User.class, id);
     }
 
     @Override
